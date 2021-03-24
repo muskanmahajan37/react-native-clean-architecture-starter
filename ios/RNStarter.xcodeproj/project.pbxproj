@@ -11,6 +11,7 @@
 		13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.m */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
+		662D964F260B23AC00890460 /* BootSplash.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 662D964E260B23AC00890460 /* BootSplash.storyboard */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
 		ABE4C301955CFC63DF8C3C8E /* libPods-RNStarter-RNStarterTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1570C99FDCE1560D13A32CC8 /* libPods-RNStarter-RNStarterTests.a */; };
 		C2FFD0EA9EFDF24CDC9001ED /* libPods-RNStarter.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6861620BDE5654E4F37D3767 /* libPods-RNStarter.a */; };
@@ -39,6 +40,7 @@
 		1570C99FDCE1560D13A32CC8 /* libPods-RNStarter-RNStarterTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-RNStarter-RNStarterTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D299DFFBE1ABB343D51966B /* Pods-RNStarter-RNStarterTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RNStarter-RNStarterTests.debug.xcconfig"; path = "Target Support Files/Pods-RNStarter-RNStarterTests/Pods-RNStarter-RNStarterTests.debug.xcconfig"; sourceTree = "<group>"; };
 		66237DF6260AE0160052F983 /* Config.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Config.xcconfig; sourceTree = "<group>"; };
+		662D964E260B23AC00890460 /* BootSplash.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = BootSplash.storyboard; path = RNStarter/BootSplash.storyboard; sourceTree = "<group>"; };
 		6861620BDE5654E4F37D3767 /* libPods-RNStarter.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-RNStarter.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = RNStarter/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A437AD9566031C77A181F417 /* Pods-RNStarter.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RNStarter.debug.xcconfig"; path = "Target Support Files/Pods-RNStarter/Pods-RNStarter.debug.xcconfig"; sourceTree = "<group>"; };
@@ -92,6 +94,7 @@
 				13B07FB51A68108700A75B9A /* Images.xcassets */,
 				13B07FB61A68108700A75B9A /* Info.plist */,
 				81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */,
+				662D964E260B23AC00890460 /* BootSplash.storyboard */,
 				13B07FB71A68108700A75B9A /* main.m */,
 			);
 			name = RNStarter;
@@ -244,6 +247,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				662D964F260B23AC00890460 /* BootSplash.storyboard in Resources */,
 				81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
 			);

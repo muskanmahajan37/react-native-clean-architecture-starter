@@ -68,3 +68,6 @@ ios/tmp.xcconfig
 .env
 .env.staging
 .env.production
+
+# jest
+coverage
