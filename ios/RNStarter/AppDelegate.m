@@ -1,4 +1,5 @@
 #import "AppDelegate.h"
+#import "ReactNativeConfig.h"
 
 #import <React/RCTBridge.h>
 #import <React/RCTBundleURLProvider.h>
@@ -31,9 +32,10 @@ static void InitializeFlipper(UIApplication *application) {
   InitializeFlipper(application);
 #endif
 
+  NSString *appName = [ReactNativeConfig envFor:@"APP_NAME"];
   RCTBridge *bridge = [[RCTBridge alloc] initWithDelegate:self launchOptions:launchOptions];
   RCTRootView *rootView = [[RCTRootView alloc] initWithBridge:bridge
-                                                   moduleName:@"ReactNativeCleanArchitectureStarter"
+                                                   moduleName:appName
                                             initialProperties:nil];
 
   if (@available(iOS 13.0, *)) {

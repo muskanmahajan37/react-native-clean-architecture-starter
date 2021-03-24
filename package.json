@@ -1,18 +1,24 @@
 {
-  "name": "reactnativecleanarchitecturestarter",
+  "name": "react-native-clean-architecture-starter",
   "version": "0.0.1",
   "private": true,
   "scripts": {
-    "android": "react-native run-android",
-    "ios": "react-native run-ios",
+    "android": "cross-env ENVFILE=.env react-native run-android",
+    "android:staging": "cross-env ENVFILE=.env.staging react-native run-android",
+    "android:production": "cross-env ENVFILE=.env.production react-native run-android",
+    "ios": "cross-env ENVFILE=.env react-native run-ios",
+    "ios:staging": "cross-env ENVFILE=.env.staging react-native run-ios",
+    "ios:production": "cross-env ENVFILE=.env.production react-native run-ios",
     "start": "react-native start",
     "test": "jest --no-cache --coverage",
-    "lint": "tsc --noEmit && eslint . --ext .ts,.tsx",
-    "pretty": "prettier --write \"{{src,__{tests|mocks}__}/**/*,index}.{ts,tsx}\""
+    "lint": "tsc --noEmit && eslint . --ext .js,.jsx,.ts,.tsx",
+    "pretty": "prettier --write \"{{src,__{tests|mocks}__}/**/*,index}.{js,jsx,ts,tsx}\""
   },
   "dependencies": {
+    "cross-env": "^7.0.3",
     "react": "17.0.1",
-    "react-native": "0.64.0"
+    "react-native": "0.64.0",
+    "react-native-config": "^1.4.2"
   },
   "devDependencies": {
     "@babel/core": "^7.12.9",
@@ -38,17 +44,6 @@
   },
   "resolutions": {
     "@types/react": "^17"
-  },
-  "jest": {
-    "preset": "react-native",
-    "moduleFileExtensions": [
-      "ts",
-      "tsx",
-      "js",
-      "jsx",
-      "json",
-      "node"
-    ]
   },
   "lint-staged": {
     "src/**/*.ts?(x)": [

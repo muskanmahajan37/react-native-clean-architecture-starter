@@ -60,3 +60,11 @@ buck-out/
 
 # VSCode
 .vscode/.react/
+
+# react-native-config codegen
+ios/tmp.xcconfig
+
+# Environment variables
+.env
+.env.staging
+.env.production

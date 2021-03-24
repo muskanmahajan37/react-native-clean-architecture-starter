@@ -3,7 +3,7 @@ require_relative '../node_modules/@react-native-community/cli-platform-ios/nativ
 
 platform :ios, '10.0'
 
-target 'ReactNativeCleanArchitectureStarter' do
+target 'RNStarter' do
   config = use_native_modules!
 
   use_react_native!(
@@ -12,7 +12,7 @@ target 'ReactNativeCleanArchitectureStarter' do
     :hermes_enabled => false
   )
 
-  target 'ReactNativeCleanArchitectureStarterTests' do
+  target 'RNStarterTests' do
     inherit! :complete
     # Pods for testing
   end
