@@ -1,7 +1,4 @@
 {
-  // Use IntelliSense to learn about possible attributes.
-  // Hover to view descriptions of existing attributes.
-  // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
   "version": "0.2.0",
   "configurations": [
     {
@@ -9,14 +6,17 @@
       "cwd": "${workspaceFolder}",
       "type": "reactnative",
       "request": "launch",
-      "platform": "android"
+      "platform": "android",
+      "target": "simulator"
     },
     {
       "name": "Debug iOS",
       "cwd": "${workspaceFolder}",
       "type": "reactnative",
       "request": "launch",
-      "platform": "ios"
+      "platform": "ios",
+      "scheme": "RNStarter (Develop)",
+      "runArguments": ["--scheme", "RNStarter (Develop)", "--simulator"]
     },
     {
       "name": "Attach to packager",

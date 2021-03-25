@@ -1,4 +1,4 @@
-import { AppLanguage } from "../types"
+import { AppLanguage } from "./types"
 
 const vi: AppLanguage = {
   name: "Việt Nam",
