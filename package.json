@@ -15,6 +15,7 @@
     "pretty": "prettier --write \"{{src,__{tests|mocks}__}/**/*,index}.{js,jsx,ts,tsx}\""
   },
   "dependencies": {
+    "@react-native-async-storage/async-storage": "^1.14.1",
     "cross-env": "^7.0.3",
     "i18n-js": "^3.8.0",
     "inversify": "^5.0.5",
