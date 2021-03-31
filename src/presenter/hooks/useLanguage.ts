@@ -2,11 +2,12 @@ import { useCallback, useEffect, useRef, useState } from "react"
 
 import { getLanguageService } from "/injection"
 import { AvailableLanguages } from "/core/language"
+import { AppLanguage } from "/services/language/translations/types"
 
 /**
  * A hook that help to get the language information of the app
  */
-export const useLanguage = () => {
+export const useLanguage = (): [AppLanguage, AvailableLanguages, (language: AvailableLanguages) => void] => {
   const language = useRef(getLanguageService())
 
   const [translation, setTranslation] = useState(language.current.translation)
