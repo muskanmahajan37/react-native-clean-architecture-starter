@@ -1,1 +1,1 @@
-npx simple-git-hooks
+run `npx simple-git-hooks`

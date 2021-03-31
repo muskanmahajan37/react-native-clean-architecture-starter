@@ -6,5 +6,19 @@ module.exports = {
   transform: {
     "^.+\\.(ts|tsx)$": "babel-jest",
   },
+  transformIgnorePatterns: [
+    "node_modules/(?!(" +
+      "@react-native-community" +
+      "|@react-navigation" +
+      "|@react-native" +
+      "|react-native" +
+      "|react-native-gesture-handler" +
+      "|react-navigation" +
+      "|react-navigation-stack" +
+      "|react-native-screens" +
+      "|react-native-iphone-x-helper" +
+      "|react-native-config" +
+      ")/)",
+  ],
   setupFiles: ["./jest.setup.js"],
 }

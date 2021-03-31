@@ -2,8 +2,9 @@ import { useCallback, useEffect, useRef, useState } from "react"
 import { getThemeManager } from "/injection"
 import { AppThemeName, AppTheme } from "/presenter/configs/themes"
 
-export const useTheme = (): [AppTheme, (themeName: AppThemeName) => void] => {
+export const useTheme = (): [AppTheme, AppThemeName, (themeName: AppThemeName) => void] => {
   const themeManager = useRef(getThemeManager())
+  const [currentThemeName, setCurrentThemeName] = useState(themeManager.current.currentThemeName)
   const [currentTheme, setCurrentTheme] = useState(themeManager.current.currentTheme)
 
   const setTheme = useCallback((themeName: AppThemeName) => {
@@ -11,6 +12,7 @@ export const useTheme = (): [AppTheme, (themeName: AppThemeName) => void] => {
   }, [])
 
   const onThemeChanged = useCallback(() => {
+    setCurrentThemeName(themeManager.current.currentThemeName)
     setCurrentTheme(themeManager.current.currentTheme)
   }, [])
 
@@ -24,5 +26,5 @@ export const useTheme = (): [AppTheme, (themeName: AppThemeName) => void] => {
     }
   }, [onThemeChanged])
 
-  return [currentTheme, setTheme]
+  return [currentTheme, currentThemeName, setTheme]
 }
