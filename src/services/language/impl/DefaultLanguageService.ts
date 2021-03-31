@@ -3,7 +3,7 @@ import { injectable } from "inversify"
 import { I18nManager } from "react-native"
 import * as RNLocalize from "react-native-localize"
 
-import { AvailableLanguages } from "@core/language"
+import { AvailableLanguages } from "/core/language"
 
 import translations from "../translations"
 import { AppLanguage } from "../translations/types"

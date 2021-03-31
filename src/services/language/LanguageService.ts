@@ -1,4 +1,4 @@
-import { AvailableLanguages } from "@core/language"
+import { AvailableLanguages } from "/core/language"
 
 import { AppLanguage } from "./translations/types"
 import { TranslateOptions } from "./types"

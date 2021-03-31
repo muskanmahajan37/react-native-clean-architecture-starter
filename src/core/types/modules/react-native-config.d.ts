@@ -3,6 +3,7 @@ declare module "react-native-config" {
     APP_NAME: string
     VERSION_CODE: number
     VERSION_NAME: string
+    BASE_URL: string
   }
 
   export const Configs: NativeConfig

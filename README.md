@@ -1,0 +1,1 @@
+npx simple-git-hooks

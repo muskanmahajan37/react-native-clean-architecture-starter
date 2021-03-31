@@ -7,9 +7,12 @@ import {
   DefaultSplashService,
   StorageService,
   AsyncStorageService,
-} from "@services"
+} from "/services"
 
 import { TYPES } from "./types"
+import { ThemeManager } from "/presenter/configs/themes"
+import { AxiosNetworkService, NetworkService } from "/services/network"
+import Configs from "react-native-config"
 
 const container = new Container()
 
@@ -20,11 +23,26 @@ const container = new Container()
 const initializeContainer = async () => {
   // binding
   container.bind<LanguageService>(TYPES.LanguageService).to(DefaultLanguageService)
-  container.bind<SplashService>(TYPES.SplashService).to(DefaultSplashService)
   container.bind<StorageService>(TYPES.StorageService).to(AsyncStorageService)
+  container.bind<ThemeManager>(TYPES.ThemeManager).to(ThemeManager)
+  container.bind<SplashService>(TYPES.SplashService).to(DefaultSplashService)
+  container.bind<NetworkService>(TYPES.NetworkService).to(AxiosNetworkService)
 
-  // initialize
-  container.get<LanguageService>(TYPES.LanguageService).initialize()
+  // declare needed instance to prepare for the initialize
+  const language = container.get<LanguageService>(TYPES.LanguageService)
+  const storage = container.get<StorageService>(TYPES.StorageService)
+  const themeManager = container.get<ThemeManager>(TYPES.ThemeManager)
+  const network = container.get<NetworkService>(TYPES.NetworkService)
+
+  // initialize language service
+  language.initialize()
+
+  // Setup theme
+  const savedTheme = await storage.tryGet(ThemeManager.storedKey)
+  themeManager.setTheme(savedTheme)
+
+  // initialize network service
+  network.initialize({ baseURL: Configs.BASE_URL || "" })
 }
 
 export { container, initializeContainer }

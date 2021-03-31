@@ -1,4 +1,4 @@
-import { Either } from "@core/types/response"
+import { Either } from "/core/types/response"
 import { CannotGetStorageDataError, CannotRemoveStorageDataError, CannotSetStorageDataError } from "./error"
 
 export interface StorageService<K = string, V = string> {

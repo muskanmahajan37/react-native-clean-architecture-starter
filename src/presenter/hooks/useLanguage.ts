@@ -1,7 +1,7 @@
 import { useCallback, useEffect, useRef, useState } from "react"
 
-import { getLanguageService } from "@injection"
-import { AvailableLanguages } from "@core/language"
+import { getLanguageService } from "/injection"
+import { AvailableLanguages } from "/core/language"
 
 /**
  * A hook that help to get the language information of the app

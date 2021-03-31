@@ -1,8 +1,10 @@
-import { Either, isSuccess } from "@core/types/response"
+import { injectable } from "inversify"
 import AsyncStorage from "@react-native-async-storage/async-storage"
+import { Either, isSuccess } from "/core/types/response"
 import { CannotGetStorageDataError, CannotRemoveStorageDataError, CannotSetStorageDataError } from "../error"
 import { StorageService } from "../StorageService"
 
+@injectable()
 export class AsyncStorageService implements StorageService<string, string> {
   async get(key: string): Promise<Either<string | null, CannotGetStorageDataError>> {
     try {

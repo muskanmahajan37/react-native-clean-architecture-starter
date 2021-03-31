@@ -1,4 +1,4 @@
 /* eslint-disable no-undef */
-import "reflect-metadata"
+// import "reflect-metadata"
 
 jest.useFakeTimers()
